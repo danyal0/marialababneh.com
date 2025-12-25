@@ -85,11 +85,14 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-[#F5F5DC] via-[#FAF8F0] to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-gradient-to-br from-[#F5F5DC] via-[#FAF8F0] to-white overflow-hidden relative">
+      {/* Animated background */}
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF6A]/10 rounded-full blur-3xl animate__animated animate__pulse animate__infinite animate__slower"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4">
+        <div className="text-center mb-16 animate__animated animate__fadeInDown">
+          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4 animate__animated animate__bounceIn">
             Let's Connect
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -103,7 +106,7 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl">
+          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl animate__animated animate__fadeInLeft">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -192,8 +195,9 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white">
+                  <div key={index} className="flex items-start space-x-4 animate__animated animate__fadeInUp"
+                    style={{ animationDelay: `${1.2 + index * 0.2}s` }}>
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white hover:rotate-12 transition-transform">
                       {info.icon}
                     </div>
                     <div className="flex-1">
@@ -219,13 +223,14 @@ export default function Contact() {
             </div>
 
             {/* Collaboration Opportunities */}
-            <div className="bg-gradient-to-br from-white to-[#F5F5DC]/20 rounded-3xl p-8 shadow-xl border border-[#D4AF6A]/10">
+            <div className="bg-gradient-to-br from-white to-[#F5F5DC]/20 rounded-3xl p-8 shadow-xl border border-[#D4AF6A]/10 animate__animated animate__zoomIn animate__delay-2s">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Open to Collaboration</h3>
               <div className="grid gap-4">
                 {opportunities.map((opp, index) => (
                   <div
                     key={index}
-                    className="bg-white p-4 rounded-xl hover:shadow-md transition-shadow duration-300"
+                    className="bg-white p-4 rounded-xl hover:shadow-md transition-all duration-300 hover:translate-x-2 animate__animated animate__fadeInLeft"
+                    style={{ animationDelay: `${2.5 + index * 0.15}s` }}
                   >
                     <div className="flex items-start space-x-3">
                       <span className="text-2xl">{opp.icon}</span>
@@ -242,7 +247,7 @@ export default function Contact() {
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-[#D4AF6A] to-[#C19A6B] rounded-3xl p-12 text-center shadow-2xl">
+        <div className="bg-gradient-to-r from-[#D4AF6A] to-[#C19A6B] rounded-3xl p-12 text-center shadow-2xl animate__animated animate__fadeInUp animate__delay-3s">
           <h3 className="text-3xl font-bold text-white mb-4">
             Let's Make a Difference Together
           </h3>

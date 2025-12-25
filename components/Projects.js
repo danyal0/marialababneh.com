@@ -81,11 +81,14 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-white overflow-hidden relative">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#F5F5DC]/30 to-transparent rounded-full blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4">
+        <div className="text-center mb-16 animate__animated animate__fadeInDown">
+          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4 animate__animated animate__bounceIn">
             Current Work
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -101,18 +104,20 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-[#F5F5DC]/20 to-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-[#D4AF6A]/10"
+              className="bg-gradient-to-br from-[#F5F5DC]/20 to-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 border border-[#D4AF6A]/10 animate__animated animate__fadeInUp"
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white animate__animated animate__bounceIn animate__delay-1s hover:rotate-12 transition-transform">
                     {project.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2 animate__animated animate__fadeInLeft"
+                      style={{ animationDelay: `${index * 0.3 + 0.2}s` }}>
                       {project.title}
                     </h3>
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${project.statusColor}`}>
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${project.statusColor} animate__animated animate__pulse animate__infinite animate__slow`}>
                       {project.status}
                     </span>
                   </div>
@@ -148,8 +153,8 @@ export default function Projects() {
         </div>
 
         {/* Publications Section */}
-        <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-xl">
-          <div className="flex items-center space-x-3 mb-8">
+        <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 shadow-xl animate__animated animate__fadeInUp animate__delay-2s">
+          <div className="flex items-center space-x-3 mb-8 animate__animated animate__fadeInLeft animate__delay-2s">
             <svg className="w-8 h-8 text-[#C19A6B]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
@@ -162,7 +167,8 @@ export default function Projects() {
             {publications.map((pub, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:translate-x-2 animate__animated animate__fadeInRight"
+                style={{ animationDelay: `${2.5 + index * 0.2}s` }}
               >
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-semibold">

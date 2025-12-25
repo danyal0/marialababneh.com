@@ -14,8 +14,9 @@ This website is inspired by the clean, professional aesthetic of [Helium Mobile]
 
 ## 🚀 Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) - React framework for production
+- **Framework**: [Next.js 16](https://nextjs.org/) - React framework for production
 - **Styling**: [Tailwind CSS 3](https://tailwindcss.com/) - Utility-first CSS framework
+- **Animations**: [Animate.css](https://animate.style/) - Professional CSS animations
 - **Fonts**: [Inter](https://fonts.google.com/specimen/Inter) - Professional sans-serif typeface
 - **Deployment Ready**: Optimized for Vercel, Netlify, or any static hosting
 
@@ -44,17 +45,19 @@ This website is inspired by the clean, professional aesthetic of [Helium Mobile]
 ## 🎯 Key Features
 
 ### Navigation
-- **Sticky header** that adapts on scroll
+- **Sticky header** that adapts on scroll with blur backdrop
 - **Smooth scroll** to section anchors
 - **Mobile-responsive menu** with hamburger toggle
 - **Professional branding** with logo and CTA button
+- **Animated transitions** on all interactions
 
 ### Hero Section
-- **Eye-catching headline** with gradient text
+- **Eye-catching headline** with gradient text and fade-in animation
 - **Clear value proposition** and introduction
 - **Quick stats** showcasing key information
 - **Dual CTAs** for exploring research and getting in touch
-- **Decorative elements** with animated backgrounds
+- **Animated brain/icon placeholder** ready for your research photos
+- **Floating background blobs** with continuous pulse animation
 
 ### About Section
 - **Profile card** with key information

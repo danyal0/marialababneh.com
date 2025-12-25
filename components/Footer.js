@@ -17,13 +17,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden relative">
+      {/* Subtle animated background */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#D4AF6A] via-[#C19A6B] to-[#D4AF6A] animate__animated animate__slideInLeft"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-12 animate__animated animate__fadeInUp">
           {/* Brand Section */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white font-bold text-lg">
+            <div className="flex items-center space-x-3 animate__animated animate__fadeInLeft">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-xl flex items-center justify-center text-white font-bold text-lg hover:rotate-12 transition-transform">
                 ML
               </div>
               <div>
@@ -106,7 +109,7 @@ export default function Footer() {
         <div className="text-center mt-8">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="inline-flex items-center space-x-2 text-gray-400 hover:text-[#D4AF6A] transition-colors duration-300 text-sm font-medium"
+            className="inline-flex items-center space-x-2 text-gray-400 hover:text-[#D4AF6A] transition-all duration-300 text-sm font-medium hover:-translate-y-2 animate__animated animate__fadeInUp"
           >
             <span>Back to Top</span>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
