@@ -25,12 +25,30 @@ export default function About() {
           <div className="bg-gradient-to-br from-[#F5F5DC] to-white rounded-3xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500 animate__animated animate__fadeInLeft">
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg animate__animated animate__bounceIn">
+                {/* 
+                  TO ADD MARIA'S LINKEDIN PHOTO:
+                  1. Download her profile picture from LinkedIn
+                  2. Save it as: /public/images/maria-profile.jpg
+                  3. The code below will automatically use it
+                  
+                  Current: Using professional placeholder from Unsplash
+                  LinkedIn images cannot be directly linked (authentication required)
+                */}
                 <Image 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
                   alt="Maria Lababneh - PhD Candidate"
                   fill
                   className="object-cover"
                 />
+                {/* 
+                  UNCOMMENT WHEN YOU ADD HER PHOTO:
+                  <Image 
+                    src="/images/maria-profile.jpg"
+                    alt="Maria Lababneh - PhD Candidate"
+                    fill
+                    className="object-cover"
+                  />
+                */}
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Maria Lababneh</h3>
