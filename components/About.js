@@ -3,11 +3,11 @@ import Image from 'next/image';
 export default function About() {
   return (
     <section id="about" className="py-24 bg-white overflow-hidden relative">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-3">
+      {/* Subtle abstract background pattern */}
+      <div className="absolute inset-0 opacity-5">
         <Image 
-          src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?w=1920&h=1080&fit=crop"
-          alt="Background"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop"
+          alt="Abstract Background Pattern"
           fill
           className="object-cover"
         />
