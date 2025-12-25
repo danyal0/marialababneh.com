@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'animate.css';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {

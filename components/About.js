@@ -1,20 +1,31 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate__animated animate__fadeInDown">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF6A] to-[#C19A6B] mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#D4AF6A] to-[#C19A6B] mx-auto rounded-full animate__animated animate__slideInLeft"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Card */}
-          <div className="bg-gradient-to-br from-[#F5F5DC] to-white rounded-3xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500">
+          <div className="bg-gradient-to-br from-[#F5F5DC] to-white rounded-3xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500 animate__animated animate__fadeInLeft">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                ML
+              <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg animate__animated animate__bounceIn">
+                {/* Placeholder - replace with actual profile photo */}
+                <div className="w-full h-full bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] flex items-center justify-center text-white text-2xl font-bold">
+                  ML
+                </div>
+                {/* Uncomment when you add profile photo:
+                <Image 
+                  src="/images/profile-photo.jpg" 
+                  alt="Maria Lababneh"
+                  fill
+                  className="object-cover"
+                />
+                */}
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Maria Lababneh</h3>
@@ -69,7 +80,7 @@ export default function About() {
           </div>
 
           {/* Bio Text */}
-          <div className="space-y-6">
+          <div className="space-y-6 animate__animated animate__fadeInRight animate__delay-1s">
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed">
                 Originally from Irbid, Jordan, I relocated to Milwaukee in August 2024 to pursue my doctorate 
@@ -98,16 +109,17 @@ export default function About() {
             {/* Core Values */}
             <div className="grid grid-cols-2 gap-4 pt-6">
               {[
-                { label: 'Evidence-Based', icon: '📊' },
-                { label: 'Community-Focused', icon: '🤝' },
-                { label: 'Collaborative', icon: '🔬' },
-                { label: 'Impact-Driven', icon: '🎯' }
+                { label: 'Evidence-Based', icon: '📊', delay: '0s' },
+                { label: 'Community-Focused', icon: '🤝', delay: '0.2s' },
+                { label: 'Collaborative', icon: '🔬', delay: '0.4s' },
+                { label: 'Impact-Driven', icon: '🎯', delay: '0.6s' }
               ].map((value, index) => (
                 <div 
                   key={index} 
-                  className="bg-gradient-to-br from-[#F5F5DC]/30 to-white p-4 rounded-xl border border-[#D4AF6A]/20 hover:shadow-lg transition-shadow duration-300"
+                  className="bg-gradient-to-br from-[#F5F5DC]/30 to-white p-4 rounded-xl border border-[#D4AF6A]/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 animate__animated animate__zoomIn"
+                  style={{ animationDelay: value.delay }}
                 >
-                  <div className="text-2xl mb-2">{value.icon}</div>
+                  <div className="text-2xl mb-2 animate__animated animate__heartBeat animate__infinite animate__slow">{value.icon}</div>
                   <div className="text-sm font-semibold text-gray-900">{value.label}</div>
                 </div>
               ))}

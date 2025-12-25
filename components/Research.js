@@ -51,11 +51,15 @@ export default function Research() {
   ];
 
   return (
-    <section id="research" className="py-24 bg-gradient-to-br from-[#F5F5DC] via-[#FAF8F0] to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="research" className="py-24 bg-gradient-to-br from-[#F5F5DC] via-[#FAF8F0] to-white overflow-hidden relative">
+      {/* Animated background elements */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-[#D4AF6A]/5 rounded-full blur-3xl animate__animated animate__pulse animate__infinite animate__slow"></div>
+      <div className="absolute bottom-20 right-10 w-60 h-60 bg-[#C19A6B]/5 rounded-full blur-3xl animate__animated animate__pulse animate__infinite animate__slower"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4">
+        <div className="text-center mb-16 animate__animated animate__fadeInDown">
+          <span className="px-4 py-2 bg-[#D4AF6A]/10 text-[#8B7355] rounded-full text-sm font-semibold border border-[#D4AF6A]/20 inline-block mb-4 animate__animated animate__bounceIn">
             Research Focus
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -75,9 +79,11 @@ export default function Research() {
           {researchAreas.map((area, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate__animated animate__fadeInUp"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 animate__animated animate__bounceIn`}
+                style={{ animationDelay: `${index * 0.2 + 0.3}s` }}>
                 {area.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -91,7 +97,7 @@ export default function Research() {
         </div>
 
         {/* Research Goals */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl animate__animated animate__fadeInUp animate__delay-1s">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
@@ -114,9 +120,11 @@ export default function Research() {
               {goals.map((goal, index) => (
                 <div
                   key={index}
-                  className="flex items-start space-x-4 p-4 bg-gradient-to-br from-[#F5F5DC]/30 to-white rounded-xl hover:shadow-md transition-shadow duration-300"
+                  className="flex items-start space-x-4 p-4 bg-gradient-to-br from-[#F5F5DC]/30 to-white rounded-xl hover:shadow-md transition-all duration-300 hover:translate-x-2 animate__animated animate__fadeInRight"
+                  style={{ animationDelay: `${1.5 + index * 0.1}s` }}
                 >
-                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-full flex items-center justify-center text-white font-bold text-sm animate__animated animate__rubberBand"
+                    style={{ animationDelay: `${1.7 + index * 0.1}s` }}>
                     {index + 1}
                   </div>
                   <p className="text-gray-700 leading-relaxed">
