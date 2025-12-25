@@ -25,23 +25,16 @@ export default function About() {
           <div className="bg-gradient-to-br from-[#F5F5DC] to-white rounded-3xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500 animate__animated animate__fadeInLeft">
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg animate__animated animate__bounceIn">
+                {/* Professional placeholder - Add Maria's actual photo when available */}
+                <div className="w-full h-full bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] flex items-center justify-center text-white text-2xl font-bold">
+                  ML
+                </div>
                 {/* 
-                  TO ADD MARIA'S LINKEDIN PHOTO:
-                  1. Download her profile picture from LinkedIn
-                  2. Save it as: /public/images/maria-profile.jpg
-                  3. The code below will automatically use it
+                  TO ADD MARIA'S ACTUAL PHOTO:
+                  1. Download her LinkedIn profile picture
+                  2. Save as: /public/images/maria-profile.jpg
+                  3. Uncomment the code below and remove the gradient div above
                   
-                  Current: Using professional placeholder from Unsplash
-                  LinkedIn images cannot be directly linked (authentication required)
-                */}
-                <Image 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
-                  alt="Maria Lababneh - PhD Candidate"
-                  fill
-                  className="object-cover"
-                />
-                {/* 
-                  UNCOMMENT WHEN YOU ADD HER PHOTO:
                   <Image 
                     src="/images/maria-profile.jpg"
                     alt="Maria Lababneh - PhD Candidate"
