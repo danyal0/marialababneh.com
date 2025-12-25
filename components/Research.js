@@ -102,11 +102,11 @@ export default function Research() {
         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl animate__animated animate__fadeInUp animate__delay-1s overflow-hidden relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
             <div className="space-y-6">
-              {/* Add research image */}
+              {/* Research visualization image */}
               <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg animate__animated animate__fadeInLeft">
                 <Image 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
-                  alt="Clinical Research Environment"
+                  src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&h=600&fit=crop"
+                  alt="Mental Health Research and Data Analysis"
                   fill
                   className="object-cover"
                 />
