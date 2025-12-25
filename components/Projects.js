@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Projects() {
   const projects = [
     {
@@ -150,6 +152,26 @@ export default function Projects() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Community Support Image */}
+        <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-2xl mb-12 animate__animated animate__zoomIn animate__delay-2s">
+          <Image 
+            src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&h=600&fit=crop"
+            alt="Veteran Support and Community Mental Health"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF6A]/80 to-[#C19A6B]/60 flex items-center justify-center">
+            <div className="text-center text-white p-8">
+              <h3 className="text-4xl font-bold mb-4 animate__animated animate__fadeInDown animate__delay-3s">
+                Community-Driven Impact
+              </h3>
+              <p className="text-xl animate__animated animate__fadeInUp animate__delay-3s">
+                Partnering with veterans and organizations for meaningful change
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Publications Section */}

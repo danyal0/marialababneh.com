@@ -1,7 +1,18 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-white overflow-hidden relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-3">
+        <Image 
+          src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?w=1920&h=1080&fit=crop"
+          alt="Background"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate__animated animate__fadeInDown">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About Me
@@ -14,17 +25,29 @@ export default function About() {
           <div className="bg-gradient-to-br from-[#F5F5DC] to-white rounded-3xl p-8 shadow-xl transform hover:scale-105 transition-all duration-500 animate__animated animate__fadeInLeft">
             <div className="flex items-center space-x-4 mb-6">
               <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg animate__animated animate__bounceIn">
-                {/* Placeholder - replace with actual profile photo */}
-                <div className="w-full h-full bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] flex items-center justify-center text-white text-2xl font-bold">
-                  ML
-                </div>
-                {/* Uncomment when you add profile photo:
+                {/* 
+                  TO ADD MARIA'S LINKEDIN PHOTO:
+                  1. Download her profile picture from LinkedIn
+                  2. Save it as: /public/images/maria-profile.jpg
+                  3. The code below will automatically use it
+                  
+                  Current: Using professional placeholder from Unsplash
+                  LinkedIn images cannot be directly linked (authentication required)
+                */}
                 <Image 
-                  src="/images/profile-photo.jpg" 
-                  alt="Maria Lababneh"
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                  alt="Maria Lababneh - PhD Candidate"
                   fill
                   className="object-cover"
                 />
+                {/* 
+                  UNCOMMENT WHEN YOU ADD HER PHOTO:
+                  <Image 
+                    src="/images/maria-profile.jpg"
+                    alt="Maria Lababneh - PhD Candidate"
+                    fill
+                    className="object-cover"
+                  />
                 */}
               </div>
               <div>
