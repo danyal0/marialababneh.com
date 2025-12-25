@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -86,6 +87,15 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-[#F5F5DC] via-[#FAF8F0] to-white overflow-hidden relative">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <Image 
+          src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=1920&h=1080&fit=crop"
+          alt="Mental Health Support Background"
+          fill
+          className="object-cover"
+        />
+      </div>
       {/* Animated background */}
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#D4AF6A]/10 rounded-full blur-3xl animate__animated animate__pulse animate__infinite animate__slower"></div>
       

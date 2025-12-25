@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Research() {
   const researchAreas = [
     {
@@ -97,9 +99,19 @@ export default function Research() {
         </div>
 
         {/* Research Goals */}
-        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl animate__animated animate__fadeInUp animate__delay-1s">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl animate__animated animate__fadeInUp animate__delay-1s overflow-hidden relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="space-y-6">
+              {/* Add research image */}
+              <div className="relative w-full h-64 rounded-2xl overflow-hidden shadow-lg animate__animated animate__fadeInLeft">
+                <Image 
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop"
+                  alt="Clinical Research Environment"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#D4AF6A]/30 to-transparent"></div>
+              </div>
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 Current Research Goals
               </h3>

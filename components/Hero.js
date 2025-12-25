@@ -74,25 +74,30 @@ export default function Hero() {
               <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-[#D4AF6A]/20 to-[#C19A6B]/10 rounded-full blur-3xl animate-pulse"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#F5F5DC] to-[#D4AF6A]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               
-              {/* Brain Image Placeholder */}
+              {/* Brain/Mental Health Image */}
               <div className="absolute inset-0 flex items-center justify-center animate__animated animate__zoomIn animate__delay-1s">
                 <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-                  {/* Placeholder gradient - replace with actual brain/mental health image */}
-                  <div className="w-full h-full bg-gradient-to-br from-[#D4AF6A] via-[#C19A6B] to-[#A88B5A] flex items-center justify-center">
-                    <svg className="w-40 h-40 text-white/80 animate__animated animate__pulse animate__infinite" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
-                  </div>
+                  <Image 
+                    src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=800&fit=crop"
+                    alt="Mental Health and Neuroscience Research"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF6A]/20 to-[#C19A6B]/20"></div>
                 </div>
               </div>
               
               {/* Main card */}
               <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-transform duration-500 animate__animated animate__fadeInUp animate__delay-2s">
                 <div className="space-y-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#D4AF6A] to-[#C19A6B] rounded-2xl flex items-center justify-center">
-                    <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                  <div className="relative w-20 h-20 rounded-2xl overflow-hidden shadow-lg">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=200&h=200&fit=crop"
+                      alt="Mental Health Research Icon"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-gray-900">
