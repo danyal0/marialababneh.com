@@ -9,8 +9,8 @@ export default function App({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#F5F5DC" />
-        <meta name="description" content="Maria Lababneh — PhD Candidate in Health Sciences at University of Wisconsin–Milwaukee, dedicated to advancing veteran mental health through innovative research and community partnerships." />
-        <meta name="keywords" content="Maria Lababneh, PhD candidate, Health Sciences, veteran mental health, stress research, depression, UWM, University of Wisconsin Milwaukee" />
+        <meta name="description" content="Maria Lababneh — PhD Candidate in Health Sciences at the University of Wisconsin–Milwaukee, Working on Well Being Lab, dedicated to advancing veteran mental health through innovative research and community partnerships." />
+        <meta name="keywords" content="Maria Lababneh, PhD candidate, Health Sciences, veteran mental health, stress research, depression, UWM, University of Wisconsin Milwaukee, Working on Well Being Lab" />
         <meta name="author" content="Maria Lababneh" />
         
         {/* Open Graph / Facebook */}
