@@ -80,6 +80,7 @@ export default function About() {
                 <div>
                   <p className="font-semibold">Institution</p>
                   <p className="text-sm">University of Wisconsin–Milwaukee</p>
+                  <p className="text-sm text-[#8B7355]">Working on Well Being Lab</p>
                 </div>
               </div>
 
@@ -100,9 +101,9 @@ export default function About() {
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 leading-relaxed">
                 Originally from Irbid, Jordan, I relocated to Milwaukee in August 2024 to pursue my doctorate 
-                in Health Sciences at the University of Wisconsin–Milwaukee. My journey into veteran mental 
-                health research is driven by a deep commitment to addressing the unique challenges faced by 
-                those who have served our communities and country.
+                in Health Sciences at the University of Wisconsin–Milwaukee, where I work in the Working on 
+                Well Being lab. My journey into veteran mental health research is driven by a deep commitment 
+                to addressing the unique challenges faced by those who have served our communities and country.
               </p>
               
               <p className="text-gray-700 leading-relaxed">

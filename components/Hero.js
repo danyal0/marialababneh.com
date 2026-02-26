@@ -23,8 +23,9 @@ export default function Hero() {
 
             <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
               I'm Maria Lababneh, a PhD candidate at the University of Wisconsin–Milwaukee, 
-              dedicated to transforming veteran mental health through innovative research, 
-              community partnerships, and evidence-based interventions.
+              working in the Working on Well Being lab. I'm dedicated to transforming veteran 
+              mental health through innovative research, community partnerships, and 
+              evidence-based interventions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

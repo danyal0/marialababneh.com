@@ -46,7 +46,7 @@ export default function Contact() {
         </svg>
       ),
       label: 'Institution',
-      value: 'University of Wisconsin–Milwaukee',
+      value: 'University of Wisconsin–Milwaukee — Working on Well Being Lab',
       link: 'https://uwm.edu'
     },
     {
